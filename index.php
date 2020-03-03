@@ -55,7 +55,7 @@
                                "What is the largest fresh water lake in the world?",
                                "What is the diameter of the earth?");
         
-        $answers = array( "ans1",
+        $quizAnswers = array( "ans1",
                           "ans3",
                           "ans3",
                           "ans1",
@@ -64,31 +64,59 @@
                           "ans2",
                           "ans1",
                           "ans4",
+                          "ans1",
                           "ans2",
                           "ans4",
-                          "");
-                               $m = 0;
-        $result = 0;
+                          "ans1",
+                          "ans3",
+                          "ans1",
+                          "ans3",
+                          "ans4",
+                          "ans2",
+                          "ans3",
+                          "ans1",
+                        );
+        $m = 0;
         // QUESTION DISPLAY STARTS HERE
         echo "<form action=\"index.php\" method=\"post\">";
         foreach($Quiz as $key => $answers){
           $n = 0;
           $m = $m + 1;
           //echo $m;
-          echo "<div><div>" .  $key . "</div><br>";
+          echo "<div>"  .  $key . "</div><br>";
           foreach($answers as $i){
             $n = $n + 1;
             echo <<<EOT
             <input type="radio" name="answers$m" value="ans$n">
-            <label>$i</label></div><br>
+            <label>$i</label><br>
 EOT;
             
           }
       }
       echo "<input type=\"submit\" value=\"Submit Answers\">";
-
-      
+      //Answer calculation
+      $i = 0;
+      $total = 0;
+      if($_POST){
+      foreach ($quizAnswers as $a){
+        $i = $i + 1;
+        if($a == $_POST["answers$i"]){
+          $total = $total + 1;
+        }
         
+      }
+    }
+    if($_POST){    
+      if($total < 10){
+        echo "<br><br>Oh no! You only got $total/20, try again for a better score!";
+      }elseif($total < 15){
+        echo "<br><br>You got a pretty average score of $total/20, maybe try again for a better score!";
+      }elseif($total < 20){
+        echo "<br><br>You did really well with a score of $total/20, congratulations!";
+      }elseif($total == 20){
+        echo "<br><br>Congratulations! You got all of the answers correct!";
+      }
+    }
       ?>
       
   </body>
