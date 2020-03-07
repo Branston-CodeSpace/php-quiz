@@ -10,28 +10,41 @@ body{
 
 .heading{
     border: 2px solid black;
-    margin-left: 5%;
-    margin-right: 5%;
+    border-radius: 25px;
+    margin-left: 11%;
+    margin-right: 11%;
+    margin-top: 3.5%;
+    padding: 5px;
     background-image: url(../images/question_background.jfif);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Press Start 2P', cursive;
+    color: blanchedalmond;
+    font-size: 25px;
+    text-align: center;
 }
 
 .questions{
     border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
     margin: 5px;
     background-image: url(../images/question_background.jfif);
     background-repeat: no-repeat;
     background-size: cover;
-    
-    width: 50%;
+    font-family: 'Oxanium', cursive;
+    width: max-content;
+    color: blueviolet;
+    font-size: 20px;
 }
 
 .answers{
     border: 2px solid black;
+    border-radius: 25px;
     margin-left: 12%;
     margin-right: 12%;
     background-image: url(../images/answer_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Saira Condensed', sans-serif;
 }
