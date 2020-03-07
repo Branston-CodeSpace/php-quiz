@@ -1,0 +1,37 @@
+body{
+    background-image: url(../images/neon_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    height: 500px;
+
+}
+
+.heading{
+    border: 2px solid black;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-image: url(../images/question_background.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.questions{
+    border: 2px solid black;
+    margin: 5px;
+    background-image: url(../images/question_background.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    width: 50%;
+}
+
+.answers{
+    border: 2px solid black;
+    margin-left: 12%;
+    margin-right: 12%;
+    background-image: url(../images/answer_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
