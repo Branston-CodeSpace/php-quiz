@@ -85,8 +85,10 @@
       </div><br>
       <?php foreach($answers as $a):
       $n = $n + 1;?>
-      <input type="radio" name="answers<?php echo $m; ?>" value="ans<?php echo $n; ?>">
-      <label><?php echo $a; ?></label><br>
+      <div class="eachAnswer">
+        <input type="radio" name="answers<?php echo $m; ?>" value="ans<?php echo $n; ?>">
+        <label><?php echo $a; ?></label><br>
+      </div>
       <?php endforeach;?>
     </div>
     <?php  endforeach;?>
