@@ -113,13 +113,13 @@
       //Message displayer
       if($_POST){    
         if($total < 10){
-          echo "<br><br>Oh no! You only got $total/20, try again for a better score!";
+          echo "<br>Oh no! You only got $total/20, try again for a better score!";
         }elseif($total < 15){
-          echo "<br><br>You got a pretty average score of $total/20, maybe try again for a better score!";
+          echo "<br>You got a pretty average score of $total/20, maybe try again for a better score!";
         }elseif($total < 20){
-          echo "<br><br>You did really well with a score of $total/20, congratulations!";
+          echo "<br>You did really well with a score of $total/20, congratulations!";
         }elseif($total == 20){
-          echo "<br><br>Congratulations! You got all of the answers correct!";
+          echo "<br>Congratulations! You got all of the answers correct!";
         }
       }
       ?>
